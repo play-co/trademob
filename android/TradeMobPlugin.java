@@ -49,7 +49,7 @@ public class TradeMobPlugin implements IPlugin {
 			String value = paramsObj.toString();
 			tracker.trackActionAlways(eventName, 0, value);
 
-			logger.log("{tradeMob} track - success: category=", eventName, "action='JSON' label=", value);
+			logger.log("{tradeMob} track - success:", eventName, "subId=", value);
         } catch (JSONException e) {
             logger.log("{tradeMob} track - failure: " + eventName + " - " + e.getMessage());
         }
