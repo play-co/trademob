@@ -1,6 +1,6 @@
 # Game Closure DevKit Plugin: TradeMob
 
-This plugin allows you to collect analytics using the [TradeMob](http://www.trademob.com/) toolkit.  Both iOS and Android targets are supported.
+This plugin allows you to collect analytics using the [TradeMob](https://trademob.atlassian.net/wiki/display/public/Trademob+Wiki+Homepage) toolkit.  Both iOS and Android targets are supported.
 
 ## Usage
 
@@ -62,7 +62,7 @@ tradeMob.track("myEvent", {
 
 Your events will be tracked as "always" events with action = event name, and a JSON string of the event data in the subId.
 
-You can test for successful integration via the [TradeMob](http://www.trademob.com/) website after successfully building and running your game on a network-connected device.  Also check the console for helpful debug messages.
+You can test for successful integration via the [TradeMob](https://trademob.atlassian.net/wiki/display/public/Trademob+Wiki+Homepage) website after successfully building and running your game on a network-connected device.  Also check the console for helpful debug messages.
 
 You should see console logs like this:
 
