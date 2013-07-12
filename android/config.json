@@ -1,0 +1,7 @@
+{
+    "copyFiles": ["TradeMobPlugin.java"],
+    "libraries": [],
+    "jars": ["TMUniversalTrackingAndroid-v1.6.3.jar"],
+    "injectionXML": "manifest.xml",
+	"injectionXSL": "manifest.xsl"
+}

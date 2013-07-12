@@ -1,0 +1,16 @@
+<!--START_PLUGINS_MANIFEST-->
+	<!--TradeMob-->
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+<!--END_PLUGINS_MANIFEST-->
+<!--START_PLUGINS_APPLICATION-->
+	<!--TradeMob-->
+	<receiver
+		android:name="com.trademob.tracking.environment.TMInstallBroadcastReceiver"
+		android:exported="true" >
+		<intent-filter>
+			<action android:name="com.android.vending.INSTALL_REFERRER" >
+			</action>
+		</intent-filter>
+	</receiver>
+
+<!--END_PLUGINS_APPLICATION-->

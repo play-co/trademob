@@ -64,8 +64,17 @@ Your events will be tracked as "always" events with action = event name, and a J
 
 You can test for successful integration via the [TradeMob](https://trademob.atlassian.net/wiki/display/public/Trademob+Wiki+Homepage) website after successfully building and running your game on a network-connected device.  Also check the console for helpful debug messages.
 
-You should see console logs like this:
+You should see console logs like this on iOS:
 
 ~~~
 2013-07-11 19:14:43.593 mmp[1597:907] TrademobUniversalSDK: Successfully tracked custom event.
+~~~
+
+On Android you should see:
+
+~~~
+ $ adb logcat | grep -i trademob
+E/JS      (14494): {tradeMob} track - success: category= UpgradePriceGroup action='JSON' label= {"priceGroup":"B_CHEAPER"}
+I/TMUniversalSDK(14494): Sending appstart event to Trademob System.
+I/TMUniversalSDK(14494): Sending custom event to Trademob System.
 ~~~
