@@ -67,12 +67,5 @@ You can test for successful integration via the [TradeMob](http://www.trademob.c
 You should see console logs like this:
 
 ~~~
-E/JS      ( 5978): {googleAnalytics} Initializing from manifest with googleTrackingID= UA-42399544-1
-
-…
-
-D/JS      ( 5978): LOG plugins.googleanalytics.googleAnalytics {googleAnalytics} track:  AppStart [object Object]
-E/JS      ( 5978): {googleAnalytics} track - success: category= AppStart action='JSON' label= {"paramTest1":"valueTest1","paramTest2":"valueTest2"}
-D/JS      ( 5978): LOG plugins.googleanalytics.googleAnalytics {googleAnalytics} track:  UpgradePriceGroup [object Object]
-E/JS      ( 5978): {googleAnalytics} track - success: category= UpgradePriceGroup action= priceGroup label= B_CHEAPER
+2013-07-11 19:14:43.593 mmp[1597:907] TrademobUniversalSDK: Successfully tracked custom event.
 ~~~
