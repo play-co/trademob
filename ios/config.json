@@ -1,0 +1,13 @@
+{
+	"code": [
+		"TMUniversalTracking.h",
+		"TradeMobPlugin.h",
+		"TradeMobPlugin.mm"
+	],
+	"frameworks": [
+		"AdSupport",
+		"CoreTelephony",
+		"Security",
+		"TMUniversalTracking.a"
+	]
+}
