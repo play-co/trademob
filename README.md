@@ -74,7 +74,7 @@ On Android you should see:
 
 ~~~
  $ adb logcat | grep -i trademob
-E/JS      (14494): {tradeMob} track - success: category= UpgradePriceGroup action='JSON' label= {"priceGroup":"B_CHEAPER"}
+E/JS      (14494): {tradeMob} track - success: UpgradePriceGroup subId= {"priceGroup":"B_CHEAPER"}
 I/TMUniversalSDK(14494): Sending appstart event to Trademob System.
 I/TMUniversalSDK(14494): Sending custom event to Trademob System.
 ~~~
