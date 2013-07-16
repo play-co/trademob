@@ -17,6 +17,13 @@
 @end
 
 
+@implementation NSString(randomAlphaNumericOfLength)
+
++ (NSString *)randomAlphaNumericOfLength:(int)len;
+
+@end
+
+
 @implementation NSString(hashMD5)
 
 - (NSString *)hashMD5 {
@@ -56,6 +63,23 @@
 		[output appendFormat:@"%02x",sha1Buffer[i]];
 	
 	return output;
+}
+
+@end
+
+
+@implementation NSString(randomAlphaNumericOfLength)
+
+static NSString *LETTERS = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
++ (NSString *)randomAlphaNumericOfLength:(int)len {
+    NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
+
+    for (int i = 0; i < len; ++i) {
+         [randomString appendFormat:@"%C", [LETTERS characterAtIndex:(arc4random() % [LETTERS length])]];
+    }
+
+    return randomString;
 }
 
 @end
