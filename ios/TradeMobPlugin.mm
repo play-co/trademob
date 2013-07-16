@@ -17,7 +17,7 @@
 @end
 
 
-@implementation NSString(randomAlphaNumericOfLength)
+@interface NSString(randomAlphaNumericOfLength)
 
 + (NSString *)randomAlphaNumericOfLength:(int)len;
 
