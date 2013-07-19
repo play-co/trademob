@@ -17,6 +17,13 @@
 @end
 
 
+@interface NSString(getBytes)
+
+- (void)getBytes:(void *)buffer length:(NSUInteger)length;
+
+@end
+
+
 @interface NSData(SHA256)
 
 - (NSString *)SHA256;
@@ -71,6 +78,15 @@
 		[output appendFormat:@"%02x",sha1Buffer[i]];
 	
 	return output;
+}
+
+@end
+
+
+@implementation NSString(getBytes)
+
+- (void)getBytes:(void *)buffer length:(NSUInteger)length {
+	[[self dataUsingEncoding:NSUTF8StringEncoding] getBytes:buffer length:length];
 }
 
 @end

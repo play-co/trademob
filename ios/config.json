@@ -2,7 +2,9 @@
 	"code": [
 		"TMUniversalTracking.h",
 		"TradeMobPlugin.h",
-		"TradeMobPlugin.mm"
+		"TradeMobPlugin.mm",
+		"NSTimer+Blocks.h",
+		"NSTimer+Blocks.m"
 	],
 	"frameworks": [
 		"AdSupport",
