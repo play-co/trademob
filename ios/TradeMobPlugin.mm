@@ -119,7 +119,7 @@ static NSString *LETTERS = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY
 	}
 }
 
-- (void) handleOpenURL:(NSURL *)url {
+- (void) handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication {
 	NSLog(@"{tradeMob} Tracking open URL '%@'", url);
 
 	[TMUniversalTracking trackOpenURL:url];
