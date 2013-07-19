@@ -17,11 +17,19 @@
 @end
 
 
+@interface NSData(SHA256)
+
+- (NSString *)SHA256;
+
+@end
+
+
 @interface NSString(randomAlphaNumericOfLength)
 
 + (NSString *)randomAlphaNumericOfLength:(int)len;
 
 @end
+
 
 
 @implementation NSString(hashMD5)
@@ -62,6 +70,28 @@
 	for(int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++)
 		[output appendFormat:@"%02x",sha1Buffer[i]];
 	
+	return output;
+}
+
+@end
+
+
+@implementation NSData(SHA256)
+
+- (NSString *)SHA256 {
+	// Create pointer to the string as UTF8
+	const void *ptr = [self bytes];
+	int len = (int)[self length];
+
+	// Create byte array of unsigned chars
+	unsigned char buffer[CC_SHA256_DIGEST_LENGTH];
+
+	CC_SHA256(ptr, len, buffer);
+
+	NSMutableString *output = [NSMutableString stringWithCapacity:CC_SHA256_DIGEST_LENGTH * 2];
+	for(int i = 0; i < CC_SHA256_DIGEST_LENGTH; i++)
+		[output appendFormat:@"%02x", buffer[i]];
+
 	return output;
 }
 
